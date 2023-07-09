@@ -9,33 +9,39 @@ function App() {
   const resultRef = useRef(null); 
   const [result, setResult] = useState(0); 
  
+  //plus function
   function plus(e) { 
     e.preventDefault(); 
     setResult((result) => result + Number(inputRef.current.value)); 
   }; 
  
+  //minus function
   function minus(e) { 
   	e.preventDefault(); 
     setResult((result) => result - Number(inputRef.current.value)); 
   }; 
   
  
+  //times function
   function times(e) { 
     e.preventDefault(); 
     setResult((result) => result * Number(inputRef.current.value)); 
   }; 
 
  
+  //division function
   function divide(e) { 
     e.preventDefault(); 
     setResult((result) => result / Number(inputRef.current.value)); 
   }; 
  
+  //resetting input text
   function resetInput(e) { 
     e.preventDefault();
     inputRef.current.value = 0;  
   }; 
  
+  //resetting the result
   function resetResult(e) { 
   	e.preventDefault();
     setResult((result) => result * 0 );
